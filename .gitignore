@@ -34,7 +34,9 @@ dist/
 
 # Data (optional)
 data/out/
-data/tmp/
+data/src/
+data/ref/
+
 
 # Docker
 docker/*.log
