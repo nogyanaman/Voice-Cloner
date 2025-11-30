@@ -1,0 +1,12 @@
+[project]
+name = "voice_conv"
+version = "1.0.0"
+description = "GPU voice conversion tool using RVC + custom pipeline."
+authors = [
+    {name = "Naman", email = "nogyanaman@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools]
+packages = ["voice_conv"]

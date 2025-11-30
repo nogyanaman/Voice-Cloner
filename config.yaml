@@ -1,0 +1,6 @@
+feature_sample_rate: 16000
+vc_sample_rate: 48000
+device: cuda
+
+logging:
+  level: INFO

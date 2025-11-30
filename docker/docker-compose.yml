@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  voiceconv:
+    build:
+      context: ..              # parent folder of docker/
+      dockerfile: docker/Dockerfile
+    container_name: voiceconv
+
+    # Enable GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+    # Mount only useful folders
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+
+    # Default command (you can override)
+    command: >
+      python3 -m voice_conv.cli 
+      --ref data/ref/A.wav 
+      --src data/src/B.wav 
+      --out data/out/C.wav 
+      --vc-sr 48000

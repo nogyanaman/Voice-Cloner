@@ -1,0 +1,2 @@
+# Dev / testing tools
+pytest==9.0.1

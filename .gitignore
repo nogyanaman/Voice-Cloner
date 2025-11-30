@@ -1,0 +1,40 @@
+# Python venv
+.venv/
+venv/
+ENV/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# pytest cache
+.pytest_cache/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Model weights (optional – keep if small)
+*.pt
+*.pth
+*.ckpt
+
+# Data (optional)
+data/out/
+data/tmp/
+
+# Docker
+docker/*.log
